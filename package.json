@@ -1,6 +1,6 @@
 {
   "name": "@fav/text.repeat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Repeat the source string the given times.",
   "main": "index.js",
   "files": [
