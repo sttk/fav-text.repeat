@@ -56,14 +56,20 @@ Repeat *source* *ntimes* times.
 
 #### Return:
 
-The repeated string.
-
-**Type:** string
+|  Type  | Description          |
+|:------:|:---------------------|
+| string | The repeated string. |
 
 
 ## Checked                                                                      
 
-### Node.js (4〜)
+### Node.js (4〜12)
+
+| Platform  |   11   |   12   |
+|:---------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|
 
 | Platform  |   4    |   5    |   6    |   7    |   8    |   9    |   10   |
 |:---------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -98,7 +104,7 @@ The repeated string.
 
 ## License
 
-Copyright (C) 2017-2018 Takayuki Sato
+Copyright (C) 2017-2019 Takayuki Sato
 
 This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.
