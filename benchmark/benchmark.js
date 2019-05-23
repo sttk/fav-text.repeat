@@ -4,7 +4,7 @@ const BenchmarkTester = require('benchmark-tester');
 
 new BenchmarkTester()
   .addPackage('String API', String.prototype)
-  
+
   .addTest('@fav/text.repeat', (repeat, data) => {
     return repeat(data[0], data[1]);
   })
@@ -26,11 +26,6 @@ new BenchmarkTester()
   .verifyTest('repeating', ['abc', 4], 'abcabcabcabc')
   .verifyTest('repeat-string', ['abc', 4], 'abcabcabcabc')
   .verifyTest('string-tools', ['abc', 4], 'abcabcabcabc')
-
-  .runTest('"" x 0', ['', 0])
-  .runTest('"" x 1', ['', 1])
-  .runTest('"" x 16', ['', 16])
-  .runTest('"" x 17', ['', 17])
 
   .runTest('"ABC" x 0', ['ABC', 0])
   .runTest('"abc" x 1', ['ABC', 1])

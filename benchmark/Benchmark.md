@@ -1,5 +1,28 @@
 # Benchmark of @fav/text.repeat
 
+## v1.0.4
+
+Comparing with following modules:
+
+- [String API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
+- [repeating](https://www.npmjs.com/package/repeating)
+- [repeat-string](https://www.npmjs.com/package/repeat-string)
+- [string-tools](https://www.npmjs.com/package/string-tools)
+
+|            | String API          | @fav/text.repeat(1.0.4) | repeating(3.0.0)    | repeat-string(1.6.1) | string-tools(1.0.0) |
+|:-----------|--------------------:|------------------------:|--------------------:|---------------------:|--------------------:|
+| "ABC" x 0  | 109,328,056 ops/sec |     699,780,107 ops/sec | 187,155,753 ops/sec |  164,186,699 ops/sec | 709,375,057 ops/sec |
+| "abc" x 1  |  66,121,276 ops/sec |     188,424,026 ops/sec | 184,459,595 ops/sec |  696,617,202 ops/sec | 186,208,161 ops/sec |
+| "ABC" x 16 |  11,604,711 ops/sec |      15,542,484 ops/sec |  12,407,847 ops/sec |   77,064,038 ops/sec |   5,693,514 ops/sec |
+| "abc" x 17 |  11,900,621 ops/sec |      13,320,288 ops/sec |  11,523,955 ops/sec |   78,130,982 ops/sec |   5,023,612 ops/sec |
+| "A-Z" x 0  | 104,603,020 ops/sec |     688,637,372 ops/sec | 168,159,761 ops/sec |  163,379,141 ops/sec | 690,755,404 ops/sec |
+| "a-z" x 1  |  35,150,060 ops/sec |     115,257,960 ops/sec |  63,088,058 ops/sec |   76,281,384 ops/sec | 179,444,943 ops/sec |
+| "A-Z" x 16 |  16,365,150 ops/sec |      24,513,790 ops/sec |  19,339,230 ops/sec |   67,019,920 ops/sec |  10,646,566 ops/sec |
+| "a-z" x 17 |  14,213,790 ops/sec |      15,544,136 ops/sec |  14,358,377 ops/sec |   71,476,628 ops/sec |   8,949,700 ops/sec |
+
+- Platform: Node.js 12.2.0 on Darwin 64-bit
+- Machine: Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz, 16GB
+
 ## v1.0.3
 
 Comparing with following modules:
@@ -11,10 +34,6 @@ Comparing with following modules:
 
 |            | String API          | @fav/text.repeat(1.0.3) | repeating(3.0.0)    | repeat-string(1.6.1) | string-tools(1.0.0) |
 |:-----------|--------------------:|------------------------:|--------------------:|---------------------:|--------------------:|
-| "" x 0     | 100,797,414 ops/sec |     701,740,297 ops/sec | 164,801,723 ops/sec |  278,759,209 ops/sec | 692,496,309 ops/sec |
-| "" x 1     |  97,671,312 ops/sec |     115,618,434 ops/sec | 166,317,314 ops/sec |  701,131,235 ops/sec | 166,868,163 ops/sec |
-| "" x 16    |  98,820,772 ops/sec |      47,855,275 ops/sec |  29,831,548 ops/sec |  113,864,015 ops/sec |  28,789,415 ops/sec |
-| "" x 17    |  99,010,546 ops/sec |      39,210,973 ops/sec |  30,435,295 ops/sec |  279,528,877 ops/sec |  39,953,720 ops/sec |
 | "ABC" x 0  |  97,700,363 ops/sec |     699,676,450 ops/sec | 167,439,869 ops/sec |  148,001,094 ops/sec | 705,829,384 ops/sec |
 | "abc" x 1  |  60,405,879 ops/sec |      86,197,556 ops/sec | 166,128,506 ops/sec |  644,306,606 ops/sec |  59,053,775 ops/sec |
 | "ABC" x 16 |  13,552,497 ops/sec |      17,122,490 ops/sec |  13,767,838 ops/sec |   69,887,236 ops/sec |   5,747,343 ops/sec |
